@@ -3,7 +3,7 @@ const findSum = function(array) {
   return sum;
 };
 
-const findFrequency = function(array) {
+const findFrequency = function(arr) {
     let obj = {}
     //create an object that tracks how many instances there are of each letter
     for (const elem in arr){
