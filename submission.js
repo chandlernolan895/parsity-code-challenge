@@ -74,5 +74,27 @@ const removeParenth = function(str) {
 };
 
 const scoreScrabble = function(str) {
-  // your code here - don't forget to return a number!
+    scoresheet = {
+    1: ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'],
+    2: ['d','g'],
+    3: ['b', 'c','m', 'p'],
+    4: ['f','h','v','w','y'],
+    5: ['k'],
+    8: ['j','x'],
+    10: ['q', 'z']
+  }
+
+  score = 0;
+
+  string = string.split('')
+  let number = 0;
+  for (let i = 0; i < string.length; i++){ //for every letter in the string parameter given
+    for (const elem in scoresheet){
+      if(scoresheet[elem].includes(string[i])){
+        number = number + Number(elem);
+       
+      }
+    }
+  }
+  return number
 };
