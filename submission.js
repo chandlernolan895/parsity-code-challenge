@@ -1,5 +1,5 @@
 const findSum = function(array) {
-  sum = array.reduce((acc, elem) => (acc + elem));
+  let sum = array.reduce((acc, elem) => (acc + elem));
   return sum;
 };
 
@@ -12,7 +12,6 @@ const findFrequency = function(arr) {
       } else{
         obj[String(arr[elem])] = obj[String(arr[elem])] + 1
       }
-   console.log(obj)
     }
     let most = obj[arr[0]];
     let least = obj[arr[0]];
@@ -36,7 +35,7 @@ const findFrequency = function(arr) {
   return new_object
 };
 
-const isPalindrome = function(str) {
+const isPalindrome = function(string) {
  let array = string.split('')
 
   for(let i = 0; i < array.length/2; i++){
@@ -50,7 +49,7 @@ const isPalindrome = function(str) {
 const largestPair = function(array) {
   let first = array[0];
   let second = array[1];
-  product = first * second
+  let product = first * second
   for (let i = 0; i < array.length -1; i ++){
     if (product < array[i]*array[i+1]){
       first = array[i]
@@ -62,7 +61,7 @@ const largestPair = function(array) {
   return product
 };
 
-const removeParenth = function(str) {
+const removeParenth = function(string) {
     let array = string.split('')
   let newarray = []
   for (const elem in array){
@@ -73,8 +72,8 @@ const removeParenth = function(str) {
   return newarray.join('')
 };
 
-const scoreScrabble = function(str) {
-    scoresheet = {
+const scoreScrabble = function(string) {
+    let scoresheet = {
     1: ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'],
     2: ['d','g'],
     3: ['b', 'c','m', 'p'],
@@ -84,7 +83,7 @@ const scoreScrabble = function(str) {
     10: ['q', 'z']
   }
 
-  score = 0;
+  let score = 0;
 
   string = string.split('')
   let number = 0;
